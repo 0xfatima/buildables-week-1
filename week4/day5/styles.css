@@ -1,0 +1,62 @@
+*{}
+.todos{
+    margin-bottom: 4rem;
+}
+
+.todos li{
+    background-color: white;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todos li div{
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.todos li.complete{
+    background-color: gray;
+    text-decoration: line-through;
+    color: black;
+}
+
+input[type='checkbox']{
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid burlywood;
+    border-radius: 100%;
+    display: grid;
+    place-content: center;
+    transition: all .2s ease-in-out;
+}
+input[type='checkbox']::before{
+    content: 'x';
+    transform: scale(0);
+    transition: all .2s ease-in-out;
+}
+
+input[type='checkbox']:checked{
+    background-color: gainsboro;
+    border-color: gainsboro;
+}
+
+input[type='checkbox']:checked::before{
+transform: scale(1);
+}
+
+.todos li button{
+    border:0;
+    padding: .25rem;
+    display: grid;
+    place-content: center;
+    background-color: transparent;
+}
+
